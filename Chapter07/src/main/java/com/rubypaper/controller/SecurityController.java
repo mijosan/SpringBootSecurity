@@ -37,5 +37,10 @@ public class SecurityController {
 		
 	}
 	
+	@GetMapping("/accessDenied")
+	public void accessDenied() {
+		
+	}
+	
 	
 }

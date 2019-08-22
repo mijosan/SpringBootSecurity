@@ -18,6 +18,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 		
 		security.csrf().disable();
 		security.formLogin().loginPage("/login").defaultSuccessUrl("/loginSuccess", true); //사용자에게 로그인 화면을 제공
+		security.exceptionHandling().accessDeniedPage("/accessDenied");
+		security.logout().invalidateHttpSession(true).logoutSuccessUrl("/login");
 	}
 	
 	@Autowired//매개변수 의존성 주입
